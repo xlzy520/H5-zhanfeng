@@ -2,7 +2,7 @@ var maps_90f36752_8815_4be8_b32b_d7fad1d0542e =
 {
 	"1": {"cls":"terrains","id":"yellowWall","canBreak":true,"noPass":"false"},
 	"2": {"cls":"terrains","id":"whiteWall","canBreak":true,"noPass":"false"},
-	"3": {"cls":"terrains","id":"blueWall","canBreak":true},
+	"3": {"cls":"terrains","id":"blueWall","canBreak":true,"noPass":"false"},
 	"4": {"cls":"animates","id":"star","noPass":true},
 	"5": {"cls":"animates","id":"lava","noPass":true},
 	"6": {"cls":"terrains","id":"ice"},
