@@ -81,7 +81,7 @@ function main() {
     this.loadList = [
         'loader', 'control', 'utils', 'items', 'icons', 'maps', 'enemys', 'events', 'actions', 'data', 'ui', 'extensions', 'core'
     ];
-    this.pureData = [
+    this.pureData = [ 
         'data', 'enemys', 'icons', 'maps', 'items', 'functions', 'events', 'plugins'
     ];
     this.materials = [
@@ -270,11 +270,7 @@ main.prototype.loadJs = function (dir, loadList, callback) {
 main.prototype.loadMod = function (dir, modName, callback, onerror) {
     var script = document.createElement('script');
     var name = modName;
-    var baseSrc = "";
-    if (!window.location.href.includes('localhost')) {
-      baseSrc = "https://cdn.jsdelivr.net/gh/xlzy520/H5-zhanfeng/";
-    }
-    script.src = baseSrc + dir + '/' + modName + (this.useCompress?".min":"") + '.js?v=' + this.version;
+    script.src = dir + '/' + modName + (this.useCompress?".min":"") + '.js?v=' + this.version;
     script.onload = function () {
         callback(name);
     }
@@ -311,11 +307,7 @@ main.prototype.loadFloors = function (callback) {
 ////// 加载某一个楼层 //////
 main.prototype.loadFloor = function(floorId, callback) {
     var script = document.createElement('script');
-    var baseSrc = "";
-    if (!window.location.href.includes('localhost')) {
-      baseSrc = "https://cdn.jsdelivr.net/gh/xlzy520/H5-zhanfeng/";
-    }
-    script.src = baseSrc + 'project/floors/' + floorId +'.js?v=' + this.version;
+    script.src = 'project/floors/' + floorId +'.js?v=' + this.version;
     main.dom.body.appendChild(script);
     script.onload = function () {
         callback(floorId);
